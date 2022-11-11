@@ -8,3 +8,27 @@ body
     min-height: 100vh
     font-family: styles.$ff-main
     color: styles.$clr-black
+    font-size: .75rem
+#site-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-block: 2.69rem
+    .menu
+        .wrapper
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 11.5rem
+            .links
+                ul
+                    list-style: none
+                    display: flex
+                    gap: 3rem
+                    font-size: 1.25rem
+            .call-to-action
+                .btn
+                    @include styles.button()
+                    &.btn-primary
+                        @include styles.button('primary')
+                        border-radius: .625rem

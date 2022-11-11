@@ -18,7 +18,7 @@ function Header() {
                         </ul>
                     </div>
                     <div className="call-to-action">
-                        <div className="btn">Connect wallet</div>
+                        <div className="btn btn-primary">Connect wallet</div>
                     </div>
                 </div>
             </div>

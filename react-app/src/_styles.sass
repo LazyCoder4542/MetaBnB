@@ -5,3 +5,11 @@ $clr-light: #F7F7F7
 $clr-border-white: #D7D7D7
 $clr-linear-white: linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)
 $ff-main: 'Red Rose', cursive
+@mixin button($type: 'null')
+    display: inline-flex
+    font-size: 1rem
+    color: $clr-white
+    align-items: center
+    @if $type == 'primary'
+        padding: 1rem 1.75rem
+        background-color: $clr-primary 
