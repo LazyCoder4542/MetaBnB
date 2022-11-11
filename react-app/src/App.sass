@@ -3,13 +3,29 @@
     box-sizing: border-box
     margin: 0
     padding: 0
+:root
+    --page-padding: 6.25rem
 
 body
     min-height: 100vh
     font-family: styles.$ff-main
     color: styles.$clr-black
     font-size: .75rem
+h1
+    font-size: 3.5rem
+    font-weight: 400
+    line-height: 5rem
+    letter-spacing: -.07rem
+input
+    font-family: inherit
+    outline: none
+    border: none
+.btn
+    @include styles.button()
+    &.btn-primary
+        @include styles.button('primary')
 #site-header
+    padding-inline: var(--page-padding)
     display: flex
     align-items: center
     justify-content: space-between
@@ -27,8 +43,11 @@ body
                     gap: 3rem
                     font-size: 1.25rem
             .call-to-action
-                .btn
-                    @include styles.button()
-                    &.btn-primary
-                        @include styles.button('primary')
-                        border-radius: .625rem
+                div
+                    border-radius: .625rem
+.container > main
+    &> section
+        display: flex
+        padding-block: 3rem
+        &> *
+            padding-inline: var(--page-padding)

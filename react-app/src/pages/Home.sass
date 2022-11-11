@@ -1,0 +1,45 @@
+@use './../_styles' as styles
+section#intro
+    gap: 6rem
+    flex-direction: column
+    .wrapper
+        display: flex
+        gap: 6.25rem
+        .tagline
+            flex-basis: 60%
+            display: flex
+            flex-direction: column
+            gap: 3rem
+            header
+                display: flex
+                flex-direction: column
+                gap: 3rem
+                h1
+                    span
+                        color: styles.$clr-primary
+                        font-weight: 700
+                p
+                    font-size: 1.5rem
+        .hero
+            flex-basis: 40%
+            display: grid
+            grid-template-columns: auto auto
+            justify-content: center
+            gap: .5rem
+            margin-block: auto
+            img
+                height: 11rem
+                transition: scale 500ms, opacity 500ms
+                &:nth-child(odd)
+                    transform: translateY(25%)
+                &:nth-child(even)
+                    transform: translateY(-25%)
+                &:hover
+                    opacity: 0.9
+                    scale: 1.2
+                    z-index: 1
+    .sponsors
+        display: flex
+        background-color: styles.$clr-primary
+        justify-content: space-between
+        align-items: center
