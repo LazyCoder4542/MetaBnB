@@ -4,6 +4,7 @@ import {concatNum} from '../custom'
 import { ReactComponent as Star } from '../assets/icons/star.svg'
 import { ReactComponent as Settings } from '../assets/icons/settings.svg'
 import { ReactComponent as Heart } from '../assets/icons/heart.svg'
+import './Places.css'
 function Places() {
     const places = data
     const [filter] = useState()
@@ -22,7 +23,7 @@ function Places() {
                             <span>Off-grid</span>
                             <span>Farm</span>
                         </div>
-                        <div className="loaction">
+                        <div className="location">
                             <span>Location</span>
                             <span><Settings /></span>
                         </div>
