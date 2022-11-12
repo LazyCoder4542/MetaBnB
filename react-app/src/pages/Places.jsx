@@ -31,41 +31,7 @@ function Places() {
                     <div className="container">
                         {renderData(places, filter) ? 
                         renderData(places, filter).map((place, idx) => {
-                            let { name, price, distance, popularity, availability, id } = place
-                            price = concatNum(price)
-                            popularity = Math.ceil(popularity / 5)
-                            console.log(price);
-                            return (
-                                <div key={idx}>
-                                    <div className="image">
-                                        <img src={`/assets/images/places/${id}.png`} alt="" />
-                                        <div className="heart">
-                                            <Heart />
-                                        </div>
-                                    </div>
-                                    <div className="desc">
-                                        <div>
-                                            <div className="name">{name}</div>
-                                            <div className="price">{price}BT per night</div>
-                                        </div>
-                                        <div>
-                                            <div className="distance">{distance}km away</div>
-                                            <div className="availability">available for {availability}weeks stay</div>
-                                        </div>
-                                        <div className="stars">
-                                            {
-                                                [1,2,3,4,5].map((idx)=> {
-                                                    return (
-                                                        <span className={idx+1 < popularity ? 'filled' : null} key={idx}>
-                                                            <Star />
-                                                        </span>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            )
+                            return renderCards(place, idx);
                         })
                         : <div className='error'></div>}
                     </div>
@@ -74,6 +40,42 @@ function Places() {
         </>
     );
 }
+function renderCards(place, idx) {
+    let { name, price, distance, popularity, availability, id } = place;
+    price = concatNum(price);
+    popularity = Math.ceil(popularity / 5);
+    console.log(price);
+    return (
+        <div key={idx}>
+            <div className="image">
+                <img src={`/assets/images/places/${id}.png`} alt="" />
+                <div className="heart">
+                    <Heart />
+                </div>
+            </div>
+            <div className="desc">
+                <div>
+                    <div className="name">{name}</div>
+                    <div className="price">{price}BT per night</div>
+                </div>
+                <div>
+                    <div className="distance">{distance}km away</div>
+                    <div className="availability">available for {availability}weeks stay</div>
+                </div>
+                <div className="stars">
+                    {[1, 2, 3, 4, 5].map((idx) => {
+                        return (
+                            <span className={idx + 1 < popularity ? 'filled' : null} key={idx}>
+                                <Star />
+                            </span>
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function renderData(data, filter = ['popularity']) {
     data = sort(data, filter)
     console.log(data)
