@@ -37,19 +37,21 @@ function Home() {
             </section>
             <section id='NFTs'>
                 <div className="wrapper">
-                    <div className="container">
+                    <div className="container1">
                         <header>
                             <h1>Metabnb NFTs</h1>
-                            <p>Discover our NFT gift cards collection. Loyal customers get amazing gift cards which are traded as NFTs. These NFTs gives our customers access to loads of our exclusive services.</p>
+                            <p>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
                         </header>
                         <div className="buttons">
                             <div className="btn btn-secondary">Learn more</div>
                         </div>
                     </div>
-                    <div className="illustrations">
-                        <img src="/assets/images/illustrations/img1.png" alt="" />
-                        <img src="/assets/images/illustrations/img2.png" alt="" />
-                        <img src="/assets/images/illustrations/img3.png" alt="" />
+                    <div className="container2">
+                        <div className="illustrations">
+                            <img src="/assets/images/illustrations/img3.png" alt="" />
+                            <img src="/assets/images/illustrations/img2.png" alt="" />
+                            <img src="/assets/images/illustrations/img1.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
