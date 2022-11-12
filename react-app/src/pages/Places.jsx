@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Places() {
-    return ( <></> );
+    return ( <h1>places</h1> );
 }
 
 export default Places;

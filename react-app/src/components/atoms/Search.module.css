@@ -1,1 +1,1 @@
-.search{display:flex;flex-direction:column}.search .search_box{display:flex;overflow:hidden;border-radius:.5rem;border:.5px solid #A0227988;align-items:center}.search .search_box input{margin-inline:1rem;width:100%}
+.search{display:flex;flex-direction:column}.search .search_box{display:flex;overflow:hidden;border-radius:.5rem;border:.5px solid #A0227988;align-items:center}.search .search_box input{flex-basis:60%;margin-inline:1rem}.search .search_box div{flex-basis:40%}

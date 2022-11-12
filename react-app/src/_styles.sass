@@ -11,6 +11,11 @@ $ff-main: 'Red Rose', cursive
     color: $clr-white
     cursor: pointer
     align-items: center
+    justify-content: center
     @if $type == 'primary'
         padding: 1rem 1.75rem
-        background-color: $clr-primary 
+        background-color: $clr-primary
+    @if $type == 'secondary'
+        padding: 1rem 1.75rem
+        background-color: $clr-linear-white
+        color: $clr-primary
