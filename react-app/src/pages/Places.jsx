@@ -5,9 +5,23 @@ import { ReactComponent as Star } from '../assets/icons/star.svg'
 import { ReactComponent as Settings } from '../assets/icons/settings.svg'
 import { ReactComponent as Heart } from '../assets/icons/heart.svg'
 import './Places.css'
-function Places() {
+import styles from './Places.module.css'
+function Places(props) {
     const places = data
     const [filter] = useState()
+    if (props.mini) {
+        const minidata = shuffle([...places]).splice(props.limit)
+        console.log(minidata);
+        return (
+            <div className={`container ${styles.place_cards}`} >
+                {renderData(minidata, filter) ? 
+                renderData(minidata, filter).map((place, idx) => {
+                    return renderCards(place, idx);
+                })
+                : <div className='error'></div>}
+            </div>
+        )
+    }
     return (
         <>
             <section id='location'>
@@ -28,7 +42,7 @@ function Places() {
                             <span><Settings /></span>
                         </div>
                     </div>
-                    <div className="container">
+                    <div className={`container ${styles.place_cards}`} >
                         {renderData(places, filter) ? 
                         renderData(places, filter).map((place, idx) => {
                             return renderCards(place, idx);
@@ -47,25 +61,25 @@ function renderCards(place, idx) {
     console.log(price);
     return (
         <div key={idx}>
-            <div className="image">
+            <div className={styles.image}>
                 <img src={`/assets/images/places/${id}.png`} alt="" />
-                <div className="heart">
+                <div className={styles.heart}>
                     <Heart />
                 </div>
             </div>
-            <div className="desc">
+            <div className={styles.desc}>
                 <div>
-                    <div className="name">{name}</div>
-                    <div className="price">{price}BT per night</div>
+                    <div className={styles.name}>{name}</div>
+                    <div className={styles.price}>{price}BT per night</div>
                 </div>
                 <div>
-                    <div className="distance">{distance}km away</div>
-                    <div className="availability">available for {availability}weeks stay</div>
+                    <div className={styles.distance}>{distance}km away</div>
+                    <div className={styles.availability}>available for {availability}weeks stay</div>
                 </div>
-                <div className="stars">
+                <div className={styles.stars}>
                     {[1, 2, 3, 4, 5].map((idx) => {
                         return (
-                            <span className={idx + 1 < popularity ? 'filled' : null} key={idx}>
+                            <span className={idx + 1 < popularity ? styles.filled : null} key={idx}>
                                 <Star />
                             </span>
                         );
@@ -78,7 +92,6 @@ function renderCards(place, idx) {
 
 function renderData(data, filter = ['popularity']) {
     data = sort(data, filter)
-    console.log(data)
     if (data === null || data === []) {
         return null
     }
@@ -96,7 +109,7 @@ function sort(arr, filters) {
     
     return arr
 }
-/*function shuffle(arr) {
+function shuffle(arr) {
     let currentIndex = arr.length,  randomIndex;
     while (currentIndex !== 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
@@ -105,6 +118,6 @@ function sort(arr, filters) {
         arr[randomIndex], arr[currentIndex]];
     }
     return arr;
-}*/
+}
 
 export default Places;

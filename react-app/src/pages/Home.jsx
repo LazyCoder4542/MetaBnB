@@ -3,6 +3,7 @@ import { ReactComponent as MBToken } from './../assets/icons/mb-token.svg'
 import { ReactComponent as Metamask } from './../assets/icons/metamask.svg'
 import { ReactComponent as OpenSea } from './../assets/icons/opensea.svg'
 import Search from '../components/atoms/Search';
+import Places from './Places';
 import './Home.css'
 function Home() {
     return (
@@ -32,6 +33,16 @@ function Home() {
                     </div>
                     <div>
                         <OpenSea />
+                    </div>
+                </div>
+            </section>
+            <section id="inspiration">
+                <div className="wrapper">
+                    <header>
+                        <h2>Inspiration for your next adventure</h2>
+                    </header>
+                    <div className="box">
+                        <Places mini limit={8}/>
                     </div>
                 </div>
             </section>
