@@ -1,5 +1,6 @@
 import React from 'react';
-
+import ReactDOM from 'react-dom/client';
+import ConnectWallet from '../atoms/ConnectWallet';
 import { ReactComponent as Logo} from './../../assets/icons/logo.svg'
 function Header() {
     return (
@@ -18,7 +19,13 @@ function Header() {
                         </ul>
                     </div>
                     <div className="call-to-action">
-                        <div className="btn btn-primary">Connect wallet</div>
+                        <div
+                        className="btn btn-primary"
+                        onClick={()=> {
+                            const smth = ReactDOM.createRoot(document.getElementById('a'))
+                            smth.render(<ConnectWallet root={smth} />)
+                        }}
+                        >Connect wallet</div>
                     </div>
                 </div>
             </div>
