@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Logo} from './../../assets/icons/logo.svg'
 import { ReactComponent as FacebookIcon} from './../../assets/icons/facebook.svg'
 import { ReactComponent as InstagramIcon} from './../../assets/icons/instagram.svg'
@@ -9,7 +10,9 @@ function Footer() {
             <div className="wrapper">
                 <header>
                     <div className="logo">
-                        <Logo />
+                        <Link to='/'>
+                            <Logo />
+                        </Link>
                     </div>
                     <div className="socials">
                         <span><FacebookIcon /></span>
@@ -25,7 +28,7 @@ function Footer() {
                     <span>Discord</span>
                 </div>
                 <div className="places">
-                    <span>Places</span>
+                    <span><Link to='places'>Places</Link></span>
                     <span>Castle</span>
                     <span>Farms</span>
                     <span>Beach</span>
