@@ -3,6 +3,9 @@
     box-sizing: border-box
     margin: 0
     padding: 0
+    &::selection
+        background: #843FE888
+        color: #333333
 :root
     --page-padding: 6.25rem
 
@@ -26,6 +29,7 @@ a
     all: unset
     color: inherit
     cursor: pointer
+    user-select: none
 .btn
     @include styles.button()
     &.btn-primary
@@ -117,7 +121,31 @@ a
                     line-height: 1.375rem
     .copyright
         font-size: 1rem
-@media screen and ( max-width: 1366px ) //768px )
+@media screen and ( max-width: 1024px )
+    :root
+        --page-padding: 4rem
+    html
+        font-size: 80%
+    #site-header
+        .logo
+            svg
+                height: 2rem
+                width: auto
+        .call-to-action
+            margin-left: 4.5rem
+    #site-footer
+        .wrapper
+            header
+                .logo
+                    svg
+                        height: 2rem
+                        width: auto
+
+@media screen and ( max-width: 768px )
+    :root
+        --page-padding: 3rem
+    html
+        font-size: 70%
     #site-header
         .menu
             order: 1
@@ -143,7 +171,7 @@ a
                 height: 0
                 width: 0
                 right: calc( var(--page-padding) / -2 )
-                translate: 0 100%
+                transform: translate(0, 100%)
                 z-index: 2
                 background-color: styles.$clr-white
                 border-radius: 1rem
@@ -152,22 +180,23 @@ a
                 opacity: 0
                 transition: opacity 500ms linear
                 .links
-                    padding: 1rem
+                    padding: 2rem
                     ul
                         flex-direction: column
                         align-items: center
+                        gap: 2rem
             &[data-isopen = 'true']
                 .hamburger
                     position: relative
                     span
                         position: absolute
                         &:nth-child(1)
-                            rotate: 45deg
+                            transform: rotate(45deg)
                         &:nth-child(2)
                             display: none
                         &:nth-child(3)
-                            rotate: -45deg
-                    
+                            transform: rotate(-45deg)
+
                 .wrapper
                     visibility: visible
                     height: auto
@@ -176,4 +205,10 @@ a
         .call-to-action
             margin: 0
             margin-left: auto
-        
+@media screen and ( max-width: 425px )
+    :root
+        --page-padding: 1rem
+    html
+        font-size: 60%
+    #site-header
+        padding-block: 2rem
