@@ -14,6 +14,8 @@ body
     font-family: styles.$ff-main
     color: styles.$clr-dark
     font-size: .75rem
+.App
+    overflow-x: hidden
 h1
     font-size: 3.5rem
     font-weight: 400
@@ -69,6 +71,7 @@ a
     &> section
         display: flex
         padding-block: 3rem
+        overflow: hidden
         &> *
             padding-inline: var(--page-padding)
 #site-footer
@@ -205,10 +208,13 @@ a
         .call-to-action
             margin: 0
             margin-left: auto
+@media screen and ( max-width: 540px )
+    :root
+        --page-padding: 1.5rem
+    #site-header
+        padding-block: 1rem
 @media screen and ( max-width: 425px )
     :root
         --page-padding: 1rem
     html
         font-size: 60%
-    #site-header
-        padding-block: 2rem
