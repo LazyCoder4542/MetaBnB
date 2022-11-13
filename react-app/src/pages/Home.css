@@ -79,7 +79,7 @@ section#NFTs .wrapper {
   padding-block: 5rem 12.68rem;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   gap: 5rem;
 }
 section#NFTs .wrapper > div {
@@ -118,15 +118,24 @@ section#NFTs .wrapper .container2 .illustrations img {
   border-radius: 0.625rem;
 }
 section#NFTs .wrapper .container2 .illustrations img:nth-child(1) {
-  transform: translate(22%, -5%) rotate(17.76deg);
+  transform: translate(22%, -25%) rotate(17.76deg);
 }
 section#NFTs .wrapper .container2 .illustrations img:nth-child(2) {
-  transform: translate(-40%, 65%) rotate(-26.02deg);
+  transform: translate(-40%, 45%) rotate(-26.02deg);
 }
 section#NFTs .wrapper .container2 .illustrations img:nth-child(3) {
-  transform: translate(35%, 90%) rotate(-8.76deg);
+  transform: translate(35%, 70%) rotate(-8.76deg);
 }
 
+@media screen and (max-width: 1024px) {
+  section#NFTs .wrapper {
+    gap: 2rem;
+  }
+  section#NFTs .wrapper .container2 .illustrations {
+    position: relative;
+    width: 25vw;
+  }
+}
 @media screen and (max-width: 1000px) {
   section#intro {
     gap: 10rem;
@@ -162,5 +171,13 @@ section#NFTs .wrapper .container2 .illustrations img:nth-child(3) {
 @media screen and (max-width: 540px) {
   section#intro .wrapper .hero {
     gap: 6rem;
+  }
+  section#NFTs {
+    background: #A02279;
+    color: #FFFFFF;
+  }
+  section#NFTs .wrapper {
+    width: 100%;
+    padding-block: 5rem;
   }
 }
