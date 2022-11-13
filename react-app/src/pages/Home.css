@@ -1,1 +1,166 @@
-section#intro{gap:6rem;flex-direction:column;padding-bottom:0}section#intro .wrapper{display:flex;gap:6.25rem}section#intro .wrapper .tagline{flex-basis:60%;display:flex;flex-direction:column;gap:3rem}section#intro .wrapper .tagline header{display:flex;flex-direction:column;align-items:center;gap:3rem}section#intro .wrapper .tagline header h1 span{color:#a02279;font-weight:700}section#intro .wrapper .tagline header p{font-size:1.5rem}section#intro .wrapper .hero{flex-basis:40%;display:grid;grid-template-columns:auto auto;justify-content:center;gap:.5rem;margin-block:auto}section#intro .wrapper .hero img{height:11rem;transition:scale 500ms,opacity 500ms}section#intro .wrapper .hero img:nth-child(odd){transform:translateY(25%)}section#intro .wrapper .hero img:nth-child(even){transform:translateY(-25%)}section#intro .wrapper .hero img:hover{opacity:.9;scale:1.2;z-index:1}section#intro .sponsors{display:flex;background-color:#a02279;justify-content:space-between;align-items:center;padding-block:.5rem}section#inspiration .wrapper{display:flex;flex-direction:column;gap:2.625rem}section#inspiration .wrapper header{display:inline-flex;place-self:center}section#inspiration .wrapper header h2{color:#000}section#NFTs{background:#a02279;color:#fff}section#NFTs .wrapper{width:100%;padding-block:5rem 12.68rem;display:flex;justify-content:space-between;align-content:center;gap:5rem}section#NFTs .wrapper>div{flex-basis:50%}section#NFTs .wrapper .container1{display:flex;flex-direction:column;gap:3.5rem}section#NFTs .wrapper .container1 header{display:flex;gap:2.25rem;flex-direction:column}section#NFTs .wrapper .container1 header p{font-size:1.125rem;max-width:26rem;line-height:2.25rem}section#NFTs .wrapper .container1 .buttons .btn{border-radius:.5rem}section#NFTs .wrapper .container2{display:flex;justify-content:center}section#NFTs .wrapper .container2 .illustrations{position:relative;width:23.625rem;height:16rem}section#NFTs .wrapper .container2 .illustrations img{position:absolute;width:100%;border-radius:.625rem}section#NFTs .wrapper .container2 .illustrations img:nth-child(1){transform:translate(22%, -5%) rotate(17.76deg)}section#NFTs .wrapper .container2 .illustrations img:nth-child(2){transform:translate(-40%, 65%) rotate(-26.02deg)}section#NFTs .wrapper .container2 .illustrations img:nth-child(3){transform:translate(35%, 90%) rotate(-8.76deg)}@media screen and (max-width: 1000px){section#intro{gap:10rem}section#intro .wrapper{position:relative}section#intro .wrapper .tagline{gap:10rem;flex-basis:100%}section#intro .wrapper .tagline header{order:1;text-align:center}section#intro .wrapper .tagline header h1{max-width:35rem}section#intro .wrapper .hero{z-index:-1;right:0;position:absolute;opacity:.4;filter:blur(1px);transform:translate(25%, 25%);gap:5rem}section#intro .sponsors div>svg{height:2rem;width:auto}}@media screen and (max-width: 540px){section#intro .wrapper .hero{gap:6rem}}
+section#intro {
+  gap: 6rem;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+section#intro .wrapper {
+  display: flex;
+  gap: 6.25rem;
+}
+section#intro .wrapper .tagline {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+section#intro .wrapper .tagline header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+section#intro .wrapper .tagline header h1 span {
+  color: #A02279;
+  font-weight: 700;
+}
+section#intro .wrapper .tagline header p {
+  font-size: 1.5rem;
+}
+section#intro .wrapper .hero {
+  flex-basis: 40%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-block: auto;
+}
+section#intro .wrapper .hero img {
+  height: 11rem;
+  transition: scale 500ms, opacity 500ms;
+}
+section#intro .wrapper .hero img:nth-child(odd) {
+  transform: translateY(25%);
+}
+section#intro .wrapper .hero img:nth-child(even) {
+  transform: translateY(-25%);
+}
+section#intro .wrapper .hero img:hover {
+  opacity: 0.9;
+  scale: 1.2;
+  z-index: 1;
+}
+section#intro .sponsors {
+  display: flex;
+  background-color: #A02279;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+
+section#inspiration .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+}
+section#inspiration .wrapper header {
+  display: inline-flex;
+  place-self: center;
+}
+section#inspiration .wrapper header h2 {
+  color: #000000;
+}
+
+section#NFTs {
+  background: #A02279;
+  color: #FFFFFF;
+}
+section#NFTs .wrapper {
+  width: 100%;
+  padding-block: 5rem 12.68rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 5rem;
+}
+section#NFTs .wrapper > div {
+  flex-basis: 50%;
+}
+section#NFTs .wrapper .container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+section#NFTs .wrapper .container1 header {
+  display: flex;
+  gap: 2.25rem;
+  flex-direction: column;
+}
+section#NFTs .wrapper .container1 header p {
+  font-size: 1.125rem;
+  max-width: 26rem;
+  line-height: 2.25rem;
+}
+section#NFTs .wrapper .container1 .buttons .btn {
+  border-radius: 0.5rem;
+}
+section#NFTs .wrapper .container2 {
+  display: flex;
+  justify-content: center;
+}
+section#NFTs .wrapper .container2 .illustrations {
+  position: relative;
+  width: 23.625rem;
+  height: 16rem;
+}
+section#NFTs .wrapper .container2 .illustrations img {
+  position: absolute;
+  width: 100%;
+  border-radius: 0.625rem;
+}
+section#NFTs .wrapper .container2 .illustrations img:nth-child(1) {
+  transform: translate(22%, -5%) rotate(17.76deg);
+}
+section#NFTs .wrapper .container2 .illustrations img:nth-child(2) {
+  transform: translate(-40%, 65%) rotate(-26.02deg);
+}
+section#NFTs .wrapper .container2 .illustrations img:nth-child(3) {
+  transform: translate(35%, 90%) rotate(-8.76deg);
+}
+
+@media screen and (max-width: 1000px) {
+  section#intro {
+    gap: 10rem;
+  }
+  section#intro .wrapper {
+    position: relative;
+  }
+  section#intro .wrapper .tagline {
+    gap: 10rem;
+    flex-basis: 100%;
+  }
+  section#intro .wrapper .tagline header {
+    order: 1;
+    text-align: center;
+  }
+  section#intro .wrapper .tagline header h1 {
+    max-width: 35rem;
+  }
+  section#intro .wrapper .hero {
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    opacity: 0.4;
+    filter: blur(1px);
+    transform: translate(25%, 25%);
+    gap: 5rem;
+  }
+  section#intro .sponsors div > svg {
+    height: 2rem;
+    width: auto;
+  }
+}
+@media screen and (max-width: 540px) {
+  section#intro .wrapper .hero {
+    gap: 6rem;
+  }
+}
