@@ -10,7 +10,8 @@ function Places(props) {
     const places = data
     const [filter] = useState()
     if (props.mini) {
-        const minidata = shuffle([...places]).splice(props.limit)
+        var minidata = shuffle([...places])
+        minidata.splice(props.limit)
         console.log(minidata);
         return (
             <div className={`container ${styles.place_cards}`} >

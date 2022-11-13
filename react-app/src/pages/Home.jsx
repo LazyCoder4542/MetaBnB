@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from '../custom';
 import { ReactComponent as MBToken } from './../assets/icons/mb-token.svg'
 import { ReactComponent as Metamask } from './../assets/icons/metamask.svg'
 import { ReactComponent as OpenSea } from './../assets/icons/opensea.svg'
@@ -6,6 +7,7 @@ import Search from '../components/atoms/Search';
 import Places from './Places';
 import './Home.css'
 function Home() {
+    const isTablet = useMediaQuery('(min-width:541px) and (max-width: 768px)')
     return (
         <>
             <section id='intro'>
@@ -42,7 +44,7 @@ function Home() {
                         <h2>Inspiration for your next adventure</h2>
                     </header>
                     <div className="box">
-                        <Places mini limit={8}/>
+                        <Places mini limit={isTablet ? 9 : 8}/>
                     </div>
                 </div>
             </section>

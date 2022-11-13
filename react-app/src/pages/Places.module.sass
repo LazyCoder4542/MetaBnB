@@ -30,6 +30,7 @@
                 display: flex
                 justify-content: space-between
                 align-items: center
+                gap: 1rem
                 &:nth-child(1)
                     .price
                         font-weight: 700
@@ -42,3 +43,13 @@
                             fill: none
                         &.filled svg > path
                             fill: styles.$clr-primary
+@media screen and ( max-width: 768px )
+    .place_cards
+        grid-template-columns: repeat(3, 1fr)
+@media screen and ( max-width: 540px )
+    .place_cards
+        grid-template-columns: repeat(2, 1fr)
+@media screen and ( max-width: 425px )
+    .place_cards
+        grid-template-columns: repeat(1, 1fr)
+    
