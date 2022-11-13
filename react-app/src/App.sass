@@ -38,21 +38,29 @@ a
     align-items: center
     justify-content: space-between
     padding-block: 2.69rem
+    z-index: 1
+    gap: 2rem
     .menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        position: relative
+        .hamburger
+            display: none
         .wrapper
             display: flex
             align-items: center
-            justify-content: space-between
-            gap: 11.5rem
             .links
                 ul
                     list-style: none
                     display: flex
                     gap: 3rem
                     font-size: 1.25rem
-            .call-to-action
-                div
-                    border-radius: .625rem
+    .call-to-action
+        margin-left: 9.5rem
+        div
+            border-radius: .625rem
 .container > main
     &> section
         display: flex
@@ -109,3 +117,63 @@ a
                     line-height: 1.375rem
     .copyright
         font-size: 1rem
+@media screen and ( max-width: 1366px ) //768px )
+    #site-header
+        .menu
+            order: 1
+            .hamburger
+                display: flex
+                width: 2rem
+                aspect-ratio: 1 / 1
+                gap: .5rem
+                flex-direction: column
+                justify-content: space-evenly
+                span
+                    background-color: #1A1A1A
+                    height: 1.5px
+                    width: 100%
+                    box-sizing: content-box
+            .wrapper
+                visibility: hidden
+                border: 1px solid styles.$clr-border-white
+                //display: none
+                position: absolute
+                flex-direction: column
+                bottom: -2rem
+                height: 0
+                width: 0
+                right: calc( var(--page-padding) / -2 )
+                translate: 0 100%
+                z-index: 2
+                background-color: styles.$clr-white
+                border-radius: 1rem
+                gap: 2rem
+                overflow: hidden
+                opacity: 0
+                transition: opacity 500ms linear
+                .links
+                    padding: 1rem
+                    ul
+                        flex-direction: column
+                        align-items: center
+            &[data-isopen = 'true']
+                .hamburger
+                    position: relative
+                    span
+                        position: absolute
+                        &:nth-child(1)
+                            rotate: 45deg
+                        &:nth-child(2)
+                            display: none
+                        &:nth-child(3)
+                            rotate: -45deg
+                    
+                .wrapper
+                    visibility: visible
+                    height: auto
+                    width: 40vw
+                    opacity: 1
+        .call-to-action
+            margin: 0
+            margin-left: auto
+        
