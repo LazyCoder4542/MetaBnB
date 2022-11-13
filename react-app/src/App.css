@@ -289,6 +289,14 @@ a {
   #site-header {
     padding-block: 1rem;
   }
+  #site-footer .wrapper {
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #site-footer .wrapper header {
+    grid-area: 1/1/2/5;
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 425px) {
   :root {

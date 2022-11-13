@@ -34,6 +34,8 @@
                 &:nth-child(1)
                     .price
                         font-weight: 700
+                &:nth-child(2) > .availability
+                    text-align: right
                 &:nth-child(3)
                     align-self: flex-start
                     gap: .5rem
@@ -49,6 +51,7 @@
 @media screen and ( max-width: 540px )
     .place_cards
         grid-template-columns: repeat(2, 1fr)
+        font-size: 1rem
 @media screen and ( max-width: 425px )
     .place_cards
         grid-template-columns: repeat(1, 1fr)
