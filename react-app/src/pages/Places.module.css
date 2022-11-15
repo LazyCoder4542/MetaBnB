@@ -21,6 +21,10 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 750ms;
+}
+.place_cards > div:not(.error) .image:hover img {
+  transform: scale(1.2);
 }
 .place_cards > div:not(.error) .image .heart {
   position: absolute;
@@ -34,25 +38,29 @@
 }
 .place_cards > div:not(.error) .desc > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  justify-content: space-between;
 }
 .place_cards > div:not(.error) .desc > div:nth-child(1) .price {
   font-weight: 700;
 }
-.place_cards > div:not(.error) .desc > div:nth-child(2) > .availability {
+.place_cards > div:not(.error) .desc > div:nth-child(2) .availability {
   text-align: right;
 }
-.place_cards > div:not(.error) .desc > div:nth-child(3) {
+.place_cards > div:not(.error) .stars {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   align-self: flex-start;
   gap: 0.5rem;
+  margin-top: auto;
 }
-.place_cards > div:not(.error) .desc > div:nth-child(3) span svg > path {
+.place_cards > div:not(.error) .stars span svg > path {
   stroke: #A02279;
   fill: none;
 }
-.place_cards > div:not(.error) .desc > div:nth-child(3) span.filled svg > path {
+.place_cards > div:not(.error) .stars span.filled svg > path {
   fill: #A02279;
 }
 

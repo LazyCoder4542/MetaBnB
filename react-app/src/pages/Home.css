@@ -127,6 +127,9 @@ section#NFTs .wrapper .container2 .illustrations img:nth-child(2) {
 section#NFTs .wrapper .container2 .illustrations img:nth-child(3) {
   transform: translate(35%, 70%) rotate(-8.76deg);
 }
+section#NFTs .wrapper .container2 .illustrations img:hover {
+  z-index: 1;
+}
 
 @media screen and (max-width: 1024px) {
   section#NFTs .wrapper {

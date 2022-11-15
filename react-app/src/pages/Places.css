@@ -14,6 +14,18 @@ section#location .wrapper .filter .tags {
   font-size: 1.25rem;
   flex-wrap: wrap;
 }
+section#location .wrapper .filter .tags span {
+  padding: 0.5rem;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  transition: background 500ms;
+  border-radius: 0.5rem;
+}
+section#location .wrapper .filter .tags > span.selected {
+  background-color: #A02279;
+  color: white;
+}
 section#location .wrapper .filter .location {
   align-self: flex-end;
   padding: 0.875rem;

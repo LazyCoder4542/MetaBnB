@@ -1,130 +1,132 @@
 [
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Deluxe Suite",
+        "price": 2500000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
-        "id": 1
+        "popularity": 78,
+        "availability": 4,
+        "id": 1,
+        "type": "Fantastic"
     },
     {
         "name": "Desert King",
-        "price": 1000000,
+        "price": 500000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 69,
         "availability": 2,
-        "id": 2
+        "id": 2,
+        "type": "Cabins" 
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Elden's Kingdom",
+        "price": 650000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 70,
+        "availability": 1,
         "id": 3
     },
     {
-        "name": "Desert King",
+        "name": "Candy House",
         "price": 1000000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 82,
+        "availability": 1,
         "id": 4
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Cheese Palace",
+        "price": 20000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 44,
         "availability": 2,
         "id": 5
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Forest King",
+        "price": 300000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 67,
+        "availability": 3,
         "id": 6
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Super Conf",
+        "price": 2000000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 81,
+        "availability": 1,
         "id": 7
     },
     {
-        "name": "Desert King",
+        "name": "Forbidden Temple",
         "price": 1000000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 72,
+        "availability": 3,
         "id": 8
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Solitary Tower",
+        "price": 10000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 39,
+        "availability": 6,
         "id": 9
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Fantasy Town",
+        "price": 300000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 64,
         "availability": 2,
         "id": 10
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Ember Island",
+        "price": 1500000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 88,
         "availability": 2,
         "id": 11
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Blazing Dugeon",
+        "price": 2000000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 82,
         "availability": 2,
         "id": 12
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Kiddes Hub",
+        "price": 50000,
         "distance": 2345,
         "popularity": 100,
-        "availability": 2,
+        "availability": 1,
         "id": 13
     },
     {
-        "name": "Desert King",
+        "name": "Cozy Cottage",
         "price": 1000000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 68,
         "availability": 2,
         "id": 14
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Arcade Den",
+        "price": 2000000,
         "distance": 2345,
-        "popularity": 100,
+        "popularity": 79,
         "availability": 2,
         "id": 15
     },
     {
-        "name": "Desert King",
-        "price": 1000000,
+        "name": "Love Park",
+        "price": 80000,
         "distance": 2345,
-        "popularity": 100,
-        "availability": 2,
+        "popularity": 90,
+        "availability": 1,
         "id": 16
     }
 ]

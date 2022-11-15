@@ -13,6 +13,16 @@ section#location
                 gap: 1rem 3rem
                 font-size: 1.25rem
                 flex-wrap: wrap
+                span
+                    padding: .5rem
+                    background-color: transparent
+                    display: inline-flex
+                    align-items: center
+                    transition: background 500ms
+                    border-radius: .5rem
+                &> span.selected
+                    background-color: styles.$clr-primary
+                    color: white
             .location
                 align-self: flex-end
                 padding: .875rem

@@ -18,6 +18,10 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+                transition: transform 750ms
+            &:hover
+                img    
+                    transform: scale(1.2)
             .heart
                 position: absolute
                 top: .625rem
@@ -28,23 +32,28 @@
             gap: .625rem
             &>div
                 display: flex
-                justify-content: space-between
                 align-items: center
                 gap: 1rem
+                justify-content: space-between
                 &:nth-child(1)
                     .price
                         font-weight: 700
-                &:nth-child(2) > .availability
-                    text-align: right
-                &:nth-child(3)
-                    align-self: flex-start
-                    gap: .5rem
-                    span
-                        svg > path
-                            stroke: styles.$clr-primary
-                            fill: none
-                        &.filled svg > path
-                            fill: styles.$clr-primary
+                &:nth-child(2)
+                    .availability
+                        text-align: right
+        .stars
+            display: flex
+            align-items: center
+            gap: 1rem
+            align-self: flex-start
+            gap: .5rem
+            margin-top: auto
+            span
+                svg > path
+                    stroke: styles.$clr-primary
+                    fill: none
+                &.filled svg > path
+                    fill: styles.$clr-primary
 @media screen and ( max-width: 768px )
     .place_cards
         grid-template-columns: repeat(3, 1fr)

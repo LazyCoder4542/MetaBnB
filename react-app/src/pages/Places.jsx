@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import data from '../assets/data/places.json';
 import {concatNum} from '../custom'
 import { ReactComponent as Star } from '../assets/icons/star.svg'
@@ -8,11 +8,14 @@ import './Places.css'
 import styles from './Places.module.css'
 function Places(props) {
     const places = data
-    const [filter] = useState()
+    const [filter, setFilter] = useState(localStorage.getItem('filter') ? JSON.parse(localStorage.getItem('filter')) : {tags: [], order: "Popularity"})
+    const filterOptions = {
+        tags: ["Restaurant", "Cottage", "Castle", "Fantastic", "Beach", "Cabins", "Off-grid", "Farm"],
+        order: ["Location", "Price", "Availability", "Popularity"]
+    }
     if (props.mini) {
         var minidata = shuffle([...places])
         minidata.splice(props.limit)
-        console.log(minidata);
         return (
             <div className={`container ${styles.place_cards}`} >
                 {renderData(minidata, filter) ? 
@@ -29,14 +32,28 @@ function Places(props) {
                 <div className="wrapper">
                     <div className="filter">
                         <div className="tags">
-                            <span>Restaurant</span>
-                            <span>Cottage</span>
-                            <span>Castle</span>
-                            <span>Fantastic</span>
-                            <span>Beach</span>
-                            <span>Cabins</span>
-                            <span>Off-grid</span>
-                            <span>Farm</span>
+                            {[...filterOptions["tags"]].map((itm, idx)=> {
+                                return <span
+                                key={idx}
+                                className={[...filter.tags].includes(itm) ? 'selected' : null}
+                                onClick={()=> {
+                                    let arr = filter.tags
+                                    if (!arr.includes(itm)){
+                                        arr.push(itm)
+                                    }
+                                    else {
+                                        arr = arr.filter((current)=> {
+                                            return current !== itm
+                                        })
+                                    }
+                                    let newTags = [...arr]
+                                    setFilter({
+                                        tags: newTags,
+                                        order: filter.order
+                                    })
+                                }}
+                                >{itm}</span>
+                            })}
                         </div>
                         <div className="location">
                             <span>Location</span>
@@ -58,8 +75,7 @@ function Places(props) {
 function renderCards(place, idx) {
     let { name, price, distance, popularity, availability, id } = place;
     price = concatNum(price);
-    popularity = Math.ceil(popularity / 5);
-    console.log(price);
+    popularity = Math.ceil(popularity / 20);
     return (
         <div key={idx}>
             <div className={styles.image}>
@@ -75,23 +91,23 @@ function renderCards(place, idx) {
                 </div>
                 <div>
                     <div className={styles.distance}>{distance}km away</div>
-                    <div className={styles.availability}>available for {availability}weeks stay</div>
+                    <div className={styles.availability}>available for {availability}{availability > 1 ? 'weeks' : 'week'} stay</div>
                 </div>
-                <div className={styles.stars}>
-                    {[1, 2, 3, 4, 5].map((idx) => {
-                        return (
-                            <span className={idx + 1 < popularity ? styles.filled : null} key={idx}>
-                                <Star />
-                            </span>
-                        );
-                    })}
-                </div>
+            </div>
+            <div className={styles.stars}>
+                {[1, 2, 3, 4, 5].map((itm) => {
+                    return (
+                        <span className={itm <= popularity ? styles.filled : null} key={itm}>
+                            <Star />
+                        </span>
+                    );
+                })}
             </div>
         </div>
     );
 }
 
-function renderData(data, filter = ['popularity']) {
+function renderData(data, filter) {
     data = sort(data, filter)
     if (data === null || data === []) {
         return null
@@ -99,14 +115,12 @@ function renderData(data, filter = ['popularity']) {
     return data
 }
 function sort(arr, filters) {
-    filters.forEach(filter => {
-        if (filter === "popularity") {
-            // arranges according to popularity
-            arr.sort((a, b)=>{
-                return (b.popularity - a.popularity)
-            })
-        }
-    });
+    if (filters.order === "Popularity") {
+        // arranges according to popularity
+        arr.sort((a, b)=>{
+            return (b.popularity - a.popularity)
+        })
+    }
     
     return arr
 }
