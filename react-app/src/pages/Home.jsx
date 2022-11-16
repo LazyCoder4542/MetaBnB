@@ -44,7 +44,7 @@ function Home() {
                         <h2>Inspiration for your next adventure</h2>
                     </header>
                     <div className="box">
-                        <Places mini limit={isTablet ? 9 : 8}/>
+                        <Places mini limit={8}/>
                     </div>
                 </div>
             </section>
